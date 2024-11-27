@@ -4,7 +4,7 @@ metadata:
   name: pod-1128282732
 spec:
   containers:
-  - name: httpd
-    image: httpd
+  - name: mi-imagen
+    image: 047719650114.dkr.ecr.us-east-1.amazonaws.com/j1128282732:latest
     ports:
-    - containerPort: 80
+    - containerPort: 5000
