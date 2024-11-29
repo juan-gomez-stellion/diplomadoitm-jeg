@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nodeport-1128282732
 spec:
-  type: NodePort
+  type: NodePort 
   selector:
     app: jeg-1128282732
   ports:
