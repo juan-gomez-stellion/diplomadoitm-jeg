@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mi-contenedor
-        image: 047719650114.dkr.ecr.us-east-1.amazonaws.com/j1128282732:latest
+        image: CONTAINER_IMAGE
         ports:
         - containerPort: 5000
