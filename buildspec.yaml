@@ -7,7 +7,7 @@ phases:
       commands:
         # Docker Image Tag with Date Time & Code Buiild Resolved Source Version
         - TAG="$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-        - sed -i '@CONTAINER_IMAGE@'"047719650114.dkr.ecr.us-east-1.amazonaws.com/j1128282732:$TAG"'@' ./kubernetes/deployment.yaml
+        - sed -i 's@CONTAINER_IMAGE@'"047719650114.dkr.ecr.us-east-1.amazonaws.com/j1128282732:$TAG"'@' ./kubernetes/deployment.yaml
         - echo "Login en el repositorio de Amazon ECR..."
         - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 047719650114.dkr.ecr.us-east-1.amazonaws.com
   build:
