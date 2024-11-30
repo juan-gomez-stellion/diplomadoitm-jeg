@@ -23,4 +23,5 @@ phases:
       - echo "Subiendo imagen a ECR"
       - docker push 047719650114.dkr.ecr.us-east-1.amazonaws.com/j1128282732:$TAG
       - aws eks update-kubeconfig --region us-east-1 --name scrumptious-creature-1732631251
-      - kubectl get deployments
+      - kubectl apply -f ./kubernetes/deployment.yaml
+      - kubectl apply -f ./kubernetes/nodeport.yaml
