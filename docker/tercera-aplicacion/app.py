@@ -23,6 +23,7 @@ def get_item(id):
   try:
     response = tabla.get_item(Key={'id': id})
 
+    return jsonify({'respuesta': 'el cambio se implementó exitosamente'}), 200
     if 'Item' in response:
       return jsonify(response['Item']), 200
     else:
